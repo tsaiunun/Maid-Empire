@@ -67,7 +67,7 @@
 		"movement": 3,
 		"strength": 90,
 		"cost": 375,
-		"requiredTech": "Mobile Tactics"
+		"requiredTech": "Mobile Tactics",
 		"uniques": ["Can move after attacking"],
 		"promotions": ["Maid Trooper", "March"]
 	},
@@ -83,9 +83,10 @@
 		"cost": 320,
 		"requiredTech": "Dynamite",
 		"upgradesTo": "Rocket Artillery",
-		"uniques": ["+[200]% Strength vs [City]","No defensive terrain bonus",
-			"Must set up to ranged attack","Limited Visibility","Ranged attacks may be performed over obstacles"],
-		"promotions": ["Maid Trooper", "Medic"],
+		"uniques": ["[+200]% Strength <when attacking> <vs cities>",
+		"No defensive terrain bonus",
+			"Must set up to ranged attack","[-1] Sight","Ranged attacks may be performed over obstacles"],
+		"promotions": ["Maid Trooper", "Medic"]
 	},
 	{
 		"name": "Spider Tank",
@@ -99,7 +100,7 @@
 		"requiredResource": "Oil",
 		"upgradesTo": "Modern Armor",
 		"uniques": ["Can move after attacking","Ignores terrain cost", "[60]% chance to intercept air attacks"],
-		"promotions": ["Maid Trooper", "Cover I"],
+		"promotions": ["Maid Trooper", "Cover I"]
 	},
 	{
 		"name": "MF 8",
@@ -115,8 +116,10 @@
 		"requiredTech": "Radar",
 		"requiredResource": "Oil",
 		"upgradesTo": "MF 14",
-		"uniques": ["[100]% chance to intercept air attacks", "+[150]% Strength vs [Bomber]",
-			"6 tiles in every direction always visible"],
+		"uniques": ["[100]% chance to intercept air attacks", "[+150]% Strength <vs [Bomber] units>","[+150]% Strength <vs cities>",
+			"[+4] Sight","Can see over obstacles",
+			"[+150]% Strength <vs [Helicopter] units>"
+		],
 		"promotions": ["Bombardment I"],
 		"attackSound": "shot"
 		
@@ -151,8 +154,9 @@
 		"requiredTech": "Lasers",
 		"requiredResource": "Aluminum",
 		"uniques": ["[100]% chance to intercept air attacks",
-			"+[150]% Strength vs [Bomber]",
-			"6 tiles in every direction always visible"],
+			"[+150]% Strength <vs [Bomber] units>","[+150]% Strength <vs cities>",
+			"[+4] Sight","Can see over obstacles",
+			"[+150]% Strength <vs [Helicopter] units>"],
 		"promotions": ["Bombardment I"],
 		"attackSound": "shot"
 	},
@@ -166,8 +170,13 @@
 		"interceptRange": 2,
 		"cost": 375,
 		"requiredTech": "Combustion",
-		"uniques": ["Can attack submarines", "[40]% chance to intercept air attacks", "+[50]% Strength vs [City]",
-			"May withdraw before melee ([50]%)", "+[100]% Strength vs [WaterSubmarine]", "Can move after attacking"],
+		"uniques": [
+			"Can see invisible [Submarine] units",
+            "[40]% chance to intercept air attacks",
+            "Withdraws before melee combat <with [80]% chance>",
+            "[+100]% Strength <vs [Submarine] units>",
+            "[+100]% Strength <vs cities>",
+            "Can move after attacking"]
 	},
 	{
 		"name": "Maid Cruiser",
@@ -181,8 +190,12 @@
 		"cost": 375,
 		"requiredTech": "Electronics",
 		"upgradesTo": "Missile Cruiser",
-		"uniques": ["Can attack submarines", "[60]% chance to intercept air attacks",
-			"+[100]% Strength vs [WaterSubmarine]", "Ranged attacks may be performed over obstacles"],
+		"uniques": [ 
+	        "Can see invisible [Submarine] units",
+            "[60]% chance to intercept air attacks",
+            "[+100]% Strength <vs [Submarine] units>",
+            "[+100]% Strength <vs cities>",
+            "Ranged attacks may be performed over obstacles"],
 		"promotions": ["Targeting I"]
 	},
 	{
@@ -190,8 +203,18 @@
 		"unitType": "Civilian",
 		"uniqueTo": "Maid Empire",
 		"replaces": "Great General",
-		"uniques": ["Can start an [8]-turn golden age", "Bonus for units in 2 tile radius 15%", "Can construct [Citadel]",
-			"Great Person - [War]", "Unbuildable", "[+1] Visibility Range", "Invisible to others"],
+		"uniques": [
+			"Empire enters a [8]-turn Golden Age <by consuming this unit>",
+            "[+15]% Strength bonus for [Military] units within [2] tiles",
+            "Can instantly construct a [Citadel] improvement <by consuming this unit>",
+            "Can be earned through combat",
+            "Is part of Great Person group [General]",
+            "Great Person - [War]",
+            "Unbuildable",
+            "Uncapturable",
+            "[+1] Sight",
+            "Invisible to others"],
+			
 		"movement": 3
-	},
+	}
 ]
